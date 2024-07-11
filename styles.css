@@ -1,0 +1,209 @@
+/* Reset some default browser styles */
+body, h1 {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    text-align: center; /* Center the navigation items */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Display list items inline */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 80px 20px 20px 20px; /* Default padding for main content */
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+    max-width: 100%; /* Ensure grid container doesn't exceed viewport width */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.grid-item {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.grid-item p {
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* Three columns on medium screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on small screens */
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 80px 10px 10px 10px; /* Adjusted padding for extra small screens */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column on extra small screens */
+    }
+
+    nav ul {
+        flex-direction: row; /* Stack navigation items vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: space-evenly; /* Space items evenly vertically */
+        height: 100%; /* Ensure the nav ul takes full height */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Adjusted margin for list items */
+    }
+}
+
+/* Additional styles for the about page */
+main h2 {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+main p, main ul {
+    text-align: left;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+main ul {
+    list-style: disc;
+    padding-left: 40px;
+}
+
+main ul li {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Additional styles for the contact page */
+.contact-details {
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.contact-details p {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.contact-details h2 {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.contact-details ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.contact-details ul li {
+    margin: 5px 0;
+}
+
+.contact-details .sunday {
+    color: red;
+    font-weight: bold;
+}
+
+.map-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.map-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive styles for contact page */
+@media (max-width: 768px) {
+    main h1, .contact-details h2 {
+        font-size: 1.2em;
+    }
+
+    .contact-details {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    main h1, .contact-details h2 {
+        font-size: 1em;
+    }
+
+    .contact-details {
+        padding: 0 5px;
+    }
+
+    /* Centering Price: ₹89,999 */
+    main p {
+        text-align: center;
+    }
+}
